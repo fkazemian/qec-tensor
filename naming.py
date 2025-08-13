@@ -6,12 +6,6 @@ class Names:
     op: str; od: str; Op: str; Od: str   # downstream (lower) & upstream (upper)
 
 class IndexRegistry:
-    """
-    Central source of truth for index names.
-    - You request handles per qubit; the registry returns consistent strings.
-    - It can advance a 'step' and reify step-suffixed names lazily.
-    - You stop hard-coding 'op0', 'Od3', etc.
-    """
     def __init__(self, n: int, step: int = 0):
         self.n = n
         self.step = step
